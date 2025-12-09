@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Events - Angry Apple Tree Ltd</title>
+    <meta name="description" content="Upcoming live music events and gigs from Angry Apple Tree Records.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon" role="img" aria-label="Apple">🍎</span>
+                <span>Angry Apple Tree</span>
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#it-services" class="nav-link">IT Services</a></li>
+                <li><a href="index.html#records" class="nav-link">Records</a></li>
+                <li><a href="index.html#games" class="nav-link">Games</a></li>
+                <li><a href="index.html#login" class="nav-link login-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="section">
+            <div class="section-header" style="text-align: left;">
+                <h1 class="hero-title" style="font-size: 3rem; margin-bottom: var(--spacing-lg);">Live Events</h1>
+                <p class="section-description">
+                    Get off the internet and come see some real music.
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Event Card -->
+                <div class="card"
+                    style="border: 4px solid var(--color-primary); background: black; transform: rotate(-1deg);">
+                    <div class="card-content">
+                        <div
+                            style="background: var(--color-primary); color: white; display: inline-block; padding: 5px 10px; font-weight: bold; margin-bottom: var(--spacing-sm); font-family: var(--font-primary);">
+                            MARCH 7, 2026
+                        </div>
+
+                        <h2 class="card-title"
+                            style="font-size: 2.5rem; color: white; border-bottom: none; margin-bottom: var(--spacing-xs); line-height: 1;">
+                            THE SCREAMIN' KICK
+                        </h2>
+                        <h3
+                            style="font-size: 1.5rem; color: var(--color-secondary); margin-bottom: var(--spacing-md); text-transform: uppercase;">
+                            Release Party
+                        </h3>
+
+                        <div
+                            style="border-top: 2px dashed var(--color-text-secondary); border-bottom: 2px dashed var(--color-text-secondary); padding: var(--spacing-sm) 0; margin-bottom: var(--spacing-md);">
+                            <p style="color: white; margin-bottom: 0;"><strong>SUPPORT FROM:</strong></p>
+                            <p style="font-size: 1.2rem; color: var(--color-text-primary);">The Second World War</p>
+                            <p style="font-size: 1.2rem; color: var(--color-text-primary);">The Bad Moods</p>
+                        </div>
+
+                        <div
+                            style="display: flex; flex-direction: column; gap: var(--spacing-xs); margin-bottom: var(--spacing-md);">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                                <span style="font-size: 1.5rem;">📍</span>
+                                <span style="font-size: 1.2rem; font-weight: bold;">Leith Depot</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                                <span style="font-size: 1.5rem;">⏰</span>
+                                <span style="font-size: 1.2rem;">Doors 7:30 PM</span>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            Get Tickets
+                            <span>🎟️</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html#it-services">IT Services</a></li>
+                    <li><a href="index.html#records">Music Production</a></li>
+                    <li><a href="index.html#games">Game Development</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:alex.bunch@angryappletree.com">alex.bunch@angryappletree.com</a></li>
+                    <li><a href="tel:+447979570182">+44 7979 570182</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Angry Apple Tree Ltd. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a
+                    href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
