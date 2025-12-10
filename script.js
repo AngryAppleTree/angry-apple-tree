@@ -266,9 +266,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const hero = document.querySelector('.hero');
 
   window.addEventListener('scroll', () => {
+    // Disable parallax on mobile to prevent overlap issues
+    if (window.innerWidth < 768) return;
+
     const scrolled = window.pageYOffset;
     if (hero && scrolled < window.innerHeight) {
-      hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+      hero.style.transform = `translateY(${scrolled * 0.2}px)`;
     }
   });
 
