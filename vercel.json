@@ -1,6 +1,14 @@
 {
     "rewrites": [
         {
+            "source": "/football",
+            "destination": "https://football-registration-three.vercel.app"
+        },
+        {
+            "source": "/football/:match*",
+            "destination": "https://football-registration-three.vercel.app/:match*"
+        },
+        {
             "source": "/spacebadgergame",
             "destination": "https://space-badger-game.vercel.app"
         },
