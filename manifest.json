@@ -1,0 +1,16 @@
+{
+    "name": "Angry Apple Tree",
+    "short_name": "AngryApple",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#050505",
+    "theme_color": "#d9365e",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "assets/app-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
