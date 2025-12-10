@@ -338,6 +338,66 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ===================================
+  // MOBILE/PWA BACK NAVIGATION
+  // ===================================
+
+  const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+
+  // Show back button on sub-pages (Catalogue, Events, etc)
+  if (!isHomePage) {
+    const navContainer = document.querySelector('.nav-container');
+    const logo = document.querySelector('.logo');
+
+    if (navContainer && logo) {
+      const backBtn = document.createElement('button');
+      backBtn.innerHTML = '←';
+      backBtn.ariaLabel = 'Go Back';
+      backBtn.className = 'nav-back-btn';
+
+      // Inline styles for the back button to match punk aesthetic
+      backBtn.style.cssText = `
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 4px 12px;
+        margin-right: var(--spacing-sm);
+        font-weight: 800;
+        transition: all 0.2s ease;
+        display: none; /* Hidden by default, shown via media query or JS */
+      `;
+
+      // Show on mobile or PWA
+      if (window.innerWidth < 768 || window.matchMedia('(display-mode: standalone)').matches) {
+        backBtn.style.display = 'block';
+      }
+
+      backBtn.addEventListener('mouseenter', () => {
+        backBtn.style.background = 'white';
+        backBtn.style.color = 'black';
+      });
+
+      backBtn.addEventListener('mouseleave', () => {
+        backBtn.style.background = 'transparent';
+        backBtn.style.color = 'white';
+      });
+
+      backBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // If history exists, go back. Else go home.
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.location.href = 'index.html';
+        }
+      });
+
+      navContainer.insertBefore(backBtn, logo);
+    }
+  }
+
+  // ===================================
   // PERFORMANCE OPTIMIZATION
   // ===================================
 
