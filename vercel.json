@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/spacebadgergame",
+            "destination": "https://space-badger-game.vercel.app"
+        },
+        {
+            "source": "/spacebadgergame/:match*",
+            "destination": "https://space-badger-game.vercel.app/:match*"
+        }
+    ]
+}
